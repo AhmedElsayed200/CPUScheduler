@@ -1,84 +1,129 @@
 import React, { useState } from "react";
-import "../../styles/tailwind.css"; // Import the Tailwind CSS styles
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-function DropdownMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("FCFS - NP");
+const DropdownMenu = () => {
+  const [selectedItem, setSelectedItem] = useState(
+    "First Come First Serve, FCFS"
+  );
 
-  function toggleMenu() {
-    setIsOpen(!isOpen);
-  }
-
-  function handleMenuItemClick(item) {
-    setSelectedItem(item);
-    toggleMenu();
-  }
+  const classNames = (...classes) => {
+    return classes.filter(Boolean).join(" ");
+  };
 
   return (
-    <div className="relative inline-block text-left">
-      <button className="ml-8 block" onClick={toggleMenu}>
-        {selectedItem}
-      </button>
-      {isOpen && (
-        <ul className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg">
-          <li className="py-2 hover:bg-gray-100">
-            <a
-              href="#"
-              onClick={() => handleMenuItemClick("FCFS - NP")}
-              className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >
-              FCFS - NP
-            </a>
-          </li>
-          <li className="py-2 hover:bg-gray-100">
-            <a
-              href="#"
-              onClick={() => handleMenuItemClick("SJF - NP")}
-              className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >
-              SJF - NP
-            </a>
-          </li>
-          <li className="py-2 hover:bg-gray-100">
-            <a
-              href="#"
-              onClick={() => handleMenuItemClick("SJF - P")}
-              className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >
-              SJF - P
-            </a>
-          </li>
-          <li className="py-2 hover:bg-gray-100">
-            <a
-              href="#"
-              onClick={() => handleMenuItemClick("LJF - NP")}
-              className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >
-              LJF - NP
-            </a>
-          </li>
-          <li className="py-2 hover:bg-gray-100">
-            <a
-              href="#"
-              onClick={() => handleMenuItemClick("Priority - NP")}
-              className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >
-              Priority - NP
-            </a>
-          </li>
-          <li className="py-2 hover:bg-gray-100">
-            <a
-              href="#"
-              onClick={() => handleMenuItemClick("Round Robin - P")}
-              className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-            >
-              Round Robin - P
-            </a>
-          </li>
-        </ul>
-      )}
-    </div>
+    <Menu as="div" className="relative inline-block text-left">
+      <div>
+        <Menu.Button className="inline-flex w-60 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+          {selectedItem}
+          <ChevronDownIcon
+            className="absolute right-2 h-5 w-5"
+            aria-hidden="true"
+          />
+        </Menu.Button>
+      </div>
+
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="py-1">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  onClick={(e) => setSelectedItem(e.target.title)}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                  title="First Come First Serve, FCFS"
+                >
+                  First Come First Serve, FCFS
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  onClick={(e) => setSelectedItem(e.target.title)}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                  title="Shortest Job First, SJF"
+                >
+                  Shortest Job First, SJF
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  onClick={(e) => setSelectedItem(e.target.title)}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                  title="Shortest Job First, SJF (P)"
+                >
+                  Shortest Job First, SJF (P)
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  onClick={(e) => setSelectedItem(e.target.title)}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                  title="Longest Job First, LJF"
+                >
+                  Longest Job First, LJF
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  onClick={(e) => setSelectedItem(e.target.title)}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                  title="Priority Scheduling"
+                >
+                  Priority Scheduling
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  onClick={(e) => setSelectedItem(e.target.title)}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm cursor-pointer"
+                  )}
+                  title="Round Robin"
+                >
+                  Round Robin
+                </a>
+              )}
+            </Menu.Item>
+          </div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
   );
-}
+};
 
 export default DropdownMenu;
