@@ -14,8 +14,14 @@ const DropdownMenu = () => {
 
   return (
     <Menu as="div" className="relative inline-block text-left">
+      <label
+        htmlFor="default-input"
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >
+        Algorithms
+      </label>
       <div>
-        <Menu.Button className="inline-flex w-60 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+        <Menu.Button className="inline-flex mb-4 w-60 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
           {selectedItem}
           <ChevronDownIcon
             className="absolute right-2 h-5 w-5"

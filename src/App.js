@@ -1,9 +1,11 @@
-import DropdownMenu from "./containers/Dropdown";
+import InputPage from "./components/InputPage";
+import OutputPage from "./components/OutputPage"
 
 function App() {
   return (
     <div className="App">
-      <DropdownMenu />
+      <InputPage />
+      <OutputPage />
     </div>
   );
 }
