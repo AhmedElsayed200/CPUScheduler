@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputTextField = ({ title }) => {
+const InputTextField = ({ title, placeholder, id }) => {
   return (
     <div className="mb-4">
       <label
@@ -11,7 +11,9 @@ const InputTextField = ({ title }) => {
       </label>
       <input
         type="text"
-        className="outline-none hover:bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        id={id}
+        placeholder={placeholder}
+        className="outline-none text-xs hover:bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-indigo-500 block w-full px-2.5 py-2"
       />
     </div>
   );
