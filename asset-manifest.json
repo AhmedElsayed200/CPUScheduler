@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CPUScheduler/static/css/main.ee86f9e3.css",
+    "main.js": "/CPUScheduler/static/js/main.3db732ef.js",
+    "index.html": "/CPUScheduler/index.html",
+    "main.ee86f9e3.css.map": "/CPUScheduler/static/css/main.ee86f9e3.css.map",
+    "main.3db732ef.js.map": "/CPUScheduler/static/js/main.3db732ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee86f9e3.css",
+    "static/js/main.3db732ef.js"
+  ]
+}
