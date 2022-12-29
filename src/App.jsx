@@ -12,7 +12,7 @@ const App = () => {
   console.log(showOutput);
 
   return (
-    <div className="flex justify-around pt-8">
+    <div className="flex items-center md:items-start flex-col md:flex-row justify-around pt-8">
       <InputPage
         algorithm={algorithm}
         setAlgorithm={setAlgorithm}

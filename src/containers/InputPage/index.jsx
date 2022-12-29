@@ -57,7 +57,7 @@ const InputPage = ({
   };
 
   return (
-    <div className="flex flex-col bg-white h-min w-72 px-6 py-6 border-2 border-gray-100 rounded-lg shadow-lg">
+    <div className="flex flex-col mb-6 bg-white h-min w-72 px-6 py-6 border-2 border-gray-100 rounded-lg shadow-lg">
       <p className="mb-6 font-extrabold font-sans text-2xl">Input</p>
       <DropdownMenu algorithm={algorithm} setAlgorithm={setAlgorithm} setShowOutput={setShowOutput} />
       <InputTextField

@@ -10,7 +10,7 @@ export const Table = ({ data }) => {
     wat: "Waiting Time",
   };
   return (
-    <div className="mt-4">
+    <div className="mt-4 overflow-auto">
       <p className="mb-2 font-bold font-sans text-xl text-gray-500">
         Calculations:
       </p>
