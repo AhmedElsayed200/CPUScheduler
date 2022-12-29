@@ -3,7 +3,7 @@ import React from "react";
 const ErrorMessage = () => {
   return (
     <div
-      className="inline-flex content-center left-0 px-2 py-1 text-xs text-red-700 bg-red-100 rounded-lg"
+      className="inline-flex absolute left-0 px-2 py-1 text-xs text-red-700 bg-red-100 rounded-lg"
       role="alert"
     >
       <svg

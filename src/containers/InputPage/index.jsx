@@ -88,7 +88,7 @@ const InputPage = ({
           placeholder="e.g. 4"
         />
       )}
-      <div className="mb-8 relative">
+      <div className="relative mb-8">
         {error && <ErrorMessage />}
         <button
           onClick={handleSubmission}
