@@ -15,7 +15,7 @@ const DropdownMenu = ({ algorithm, setAlgorithm }) => {
     <Menu as="div" className="relative inline-block text-left">
       <label
         htmlFor="default-input"
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        className="block mb-2 text-sm font-medium text-gray-900"
       >
         Algorithms
       </label>

@@ -10,7 +10,7 @@ const App = () => {
   const [quantumTime, setQuantumTime] = useState([]);
 
   return (
-    <div className="App">
+    <div className="flex justify-around pt-8 bg-gray-100 h-screen">
       <InputPage
         algorithm={algorithm}
         setAlgorithm={setAlgorithm}
