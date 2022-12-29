@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CPUScheduler/static/css/main.ee86f9e3.css",
-    "main.js": "/CPUScheduler/static/js/main.3db732ef.js",
+    "main.css": "/CPUScheduler/static/css/main.5bafc65f.css",
+    "main.js": "/CPUScheduler/static/js/main.95123b56.js",
     "index.html": "/CPUScheduler/index.html",
-    "main.ee86f9e3.css.map": "/CPUScheduler/static/css/main.ee86f9e3.css.map",
-    "main.3db732ef.js.map": "/CPUScheduler/static/js/main.3db732ef.js.map"
+    "main.5bafc65f.css.map": "/CPUScheduler/static/css/main.5bafc65f.css.map",
+    "main.95123b56.js.map": "/CPUScheduler/static/js/main.95123b56.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee86f9e3.css",
-    "static/js/main.3db732ef.js"
+    "static/css/main.5bafc65f.css",
+    "static/js/main.95123b56.js"
   ]
 }
