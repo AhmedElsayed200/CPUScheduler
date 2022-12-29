@@ -12,7 +12,7 @@ export const SJF = (arrivalTime, burstTime) => {
 
   for (let i = 0; i < arrivalTime.length; i++) {
     processes.push({
-      processesID: "P" + i, // generate processID identifier
+      processID: "P" + i, // generate processID identifier
       aTime: arrivalTime[i],
       bTime: burstTime[i],
     });
@@ -54,7 +54,7 @@ export const SJF = (arrivalTime, burstTime) => {
   doneJobs.push(processes[0]);
 
   ganttChartInfo.push({
-    processesID: processes[0].processesID,
+    processID: processes[0].processID,
     start: processes[0].aTime,
     stop: finishTime[0],
   });
@@ -99,7 +99,7 @@ export const SJF = (arrivalTime, burstTime) => {
       finishTime.push(execProcess.aTime + execProcess.bTime);
       const latestFtime = finishTime[finishTime.length - 1];
       ganttChartInfo.push({
-        processesID: execProcess.processesID,
+        processID: execProcess.processID,
         start: execProcess.aTime,
         stop: latestFtime,
       });
@@ -107,7 +107,7 @@ export const SJF = (arrivalTime, burstTime) => {
       finishTime.push(previousFinishTime + execProcess.bTime);
       const latestFtime = finishTime[finishTime.length - 1];
       ganttChartInfo.push({
-        processesID: execProcess.processesID,
+        processID: execProcess.processID,
         start: previousFinishTime,
         stop: latestFtime,
       });
@@ -149,9 +149,9 @@ export const SJF = (arrivalTime, burstTime) => {
       ? 1
       : ele1.aTime < ele2.aTime
       ? -1
-      : ele1.processesID > ele2.processesID
+      : ele1.processID > ele2.processID
       ? 1
-      : ele1.processesID < ele2.processesID
+      : ele1.processID < ele2.processID
       ? -1
       : 0;
   });

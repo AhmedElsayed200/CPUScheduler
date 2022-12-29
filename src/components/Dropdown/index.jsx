@@ -3,9 +3,10 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-const DropdownMenu = ({ algorithm, setAlgorithm }) => {
+const DropdownMenu = ({ algorithm, setAlgorithm, setShowOutput }) => {
   const handleSelection = (e) => {
     setAlgorithm(e.target.title);
+    setShowOutput(false);
   };
   const classNames = (...classes) => {
     return classes.filter(Boolean).join(" ");
@@ -42,6 +43,7 @@ const DropdownMenu = ({ algorithm, setAlgorithm }) => {
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   onClick={(e) => handleSelection(e)}
                   className={classNames(
@@ -56,6 +58,7 @@ const DropdownMenu = ({ algorithm, setAlgorithm }) => {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   onClick={(e) => handleSelection(e)}
                   className={classNames(
@@ -70,6 +73,7 @@ const DropdownMenu = ({ algorithm, setAlgorithm }) => {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   onClick={(e) => handleSelection(e)}
                   className={classNames(
@@ -84,6 +88,7 @@ const DropdownMenu = ({ algorithm, setAlgorithm }) => {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   onClick={(e) => handleSelection(e)}
                   className={classNames(
@@ -98,6 +103,7 @@ const DropdownMenu = ({ algorithm, setAlgorithm }) => {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   onClick={(e) => handleSelection(e)}
                   className={classNames(
@@ -112,6 +118,7 @@ const DropdownMenu = ({ algorithm, setAlgorithm }) => {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
                   onClick={(e) => handleSelection(e)}
                   className={classNames(

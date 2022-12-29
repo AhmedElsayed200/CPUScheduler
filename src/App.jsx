@@ -8,6 +8,8 @@ const App = () => {
   const [burstTimes, setBurstTimes] = useState([]);
   const [priorities, setPriorities] = useState([]);
   const [quantumTime, setQuantumTime] = useState([]);
+  const [showOutput, setShowOutput] = useState(false);
+  console.log(showOutput);
 
   return (
     <div className="flex justify-around pt-8 bg-gray-100 h-screen">
@@ -18,6 +20,7 @@ const App = () => {
         setBurstTimes={setBurstTimes}
         setPriorities={setPriorities}
         setQuantumTime={setQuantumTime}
+        setShowOutput={setShowOutput}
       />
       <OutputPage
         algorithm={algorithm}
@@ -25,6 +28,7 @@ const App = () => {
         burstTimes={burstTimes}
         priorities={priorities}
         quantumTime={quantumTime}
+        showOutput={showOutput}
       />
     </div>
   );

@@ -10,6 +10,7 @@ const InputPage = ({
   setBurstTimes,
   setPriorities,
   setQuantumTime,
+  setShowOutput
 }) => {
   const [error, setError] = useState(false);
 
@@ -44,19 +45,21 @@ const InputPage = ({
         (!quantumValue || quantumValue[0] <= 0 || quantumValue.length > 1))
     ) {
       setError(true);
+      setShowOutput(false);
       return;
     }
     setError(false);
+    setShowOutput(true);
     setArrivalTimes(arrivalArray);
     setBurstTimes(burstArray);
     setPriorities(priorityArray);
-    setQuantumTime(quantumValue);
+    setQuantumTime(quantumValue[0]);
   };
 
   return (
     <div className="flex flex-col bg-white h-min w-72 px-6 py-6 border-2 border-gray-100 rounded-lg shadow-lg">
       <p className="mb-6 font-extrabold font-sans text-2xl">Input</p>
-      <DropdownMenu algorithm={algorithm} setAlgorithm={setAlgorithm} />
+      <DropdownMenu algorithm={algorithm} setAlgorithm={setAlgorithm} setShowOutput={setShowOutput} />
       <InputTextField
         setArrivalTimes={setArrivalTimes}
         title="Arrival Times"
