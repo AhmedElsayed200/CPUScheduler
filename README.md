@@ -14,6 +14,12 @@ _List of algorithms_
 ![Home Page](./cpu-scheduler-page.PNG)
 _Cpu Scheduler calculations_
 
+## Online
+
+You can also visit the deployed version at:
+
+[https://ahmedelsayed200.github.io/CPUScheduler/](https://ahmedelsayed200.github.io/CPUScheduler/)
+
 ## Technologies Used
 
 This project was developed using the following technologies:
@@ -66,9 +72,3 @@ To run the CPU Scheduler App on your local machine, follow these steps:
   ```
 
 5. The Fifteen Puzzle Game should now be accessible in your web browser at [http://localhost:3000](http://localhost:3000).
-
-## Online
-
-You can also visit the deployed version at:
-
-[https://ahmedelsayed200.github.io/CPUScheduler/](https://ahmedelsayed200.github.io/CPUScheduler/)
