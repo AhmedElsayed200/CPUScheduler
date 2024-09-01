@@ -8,6 +8,12 @@ The CPU Scheduler App is a simulation tool that allows users to explore various 
 - Round Robin
 - Priority Scheduling
 
+![Home Page](./cpu-scheduler-page-algos.PNG)
+_List of algorithms_
+
+![Home Page](./cpu-scheduler-page.PNG)
+_Cpu Scheduler calculations_
+
 ## Technologies Used
 
 This project was developed using the following technologies:
@@ -26,7 +32,8 @@ To run the CPU Scheduler App on your local machine, follow these steps:
    ```
 
 2. Navigate to the project directory:
-    ```bash
+
+   ```bash
    cd CPUScheduler
    ```
 
